@@ -172,7 +172,7 @@ function reducer(state,action){
       case"Finish":
       return{...state,status:"Finish",}
       case"Restart":
-      return{...state,index:0,answer:null,points:0,status:"Active",}
+      return{...state,index:0,answer:null,points:0,status:"Active",timeToSecond:280}
       case "Time":
       return{...state,timeToSecond:(state.timeToSecond === 0) ? 280 : Number(state.timeToSecond - 1),status: (state.timeToSecond === 0) ? "Finish" : "Active", }
     default:
